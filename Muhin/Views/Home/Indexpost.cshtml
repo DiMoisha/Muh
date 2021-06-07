@@ -1,0 +1,40 @@
+﻿@model Muh.Models.MyDatView
+
+@{
+    ViewBag.Title = "Период";
+}
+
+<h2>Выбраный период</h2>
+
+
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CBDat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CBDat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CEDat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CEDat)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Продукция", "Production", new { /* id = Model.PrimaryKey */ })
+    <br />
+    @Html.ActionLink("Категории", "Categ", new { /* id = Model.PrimaryKey */ })
+    <br />
+    @Html.ActionLink("По часам", "Hr", new { /* id = Model.PrimaryKey */ })
+    <br />
+
+</p>

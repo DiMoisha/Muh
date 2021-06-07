@@ -1,0 +1,34 @@
+﻿@model WebUI.Models.AssortmentMenu
+@if (Model.Categories.Count() > 0)
+{
+    <div class="col-xs-12 col-sm-12 col-md-3 navbar navbar-default category-menu-wrapper" role="navigation">
+        <div class="container visible-xs">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle btn-category-menu-xs" data-toggle="collapse" data-target=".category-menu">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <h2>Каталог продукции</h2>
+            </div>
+        </div>
+        <h2 class="hidden-xs">Каталог продукции&nbsp;<b class="caret"></b></h2>
+        <nav class="navbar navbar-collapse collapse category-menu">
+            <ul class="nav nav-stacked" role="menu">
+                <li role="menuitem" class="@Html.Encode(Model.MenuId == -1 ? "active" : "")">
+                    <a class="bestprice" href="@Url.Action("Bestprice", "Product", new { pageNum = 0 })" title="Выгодное предложение" role="button">
+                        <span class="glyphicon glyphicon-thumbs-up"></span>&nbsp;Выгодное предложение
+                    </a>
+                </li>
+                @foreach (var m in Model.Categories)
+                {
+                    <li role="menuitem" class="@Html.Encode(m.CategoryId == Model.MenuId ? "active" : "")">
+                        @Html.ActionLink(m.CategoryName, "Index", "Product", new { categoryId = m.CategoryId,  pageNum = 0 }, new { @role = "button", @title = m.CategoryName })
+                    </li>
+                }
+            </ul>
+        </nav>
+        @{ Html.RenderAction("CategoryProfit", "Product", new { categoryId = Model.MenuId }); }
+    </div>
+}

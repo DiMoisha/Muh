@@ -1,0 +1,71 @@
+﻿@model Muhin.ModelView.AbView
+
+<div>
+    <h4>Доставка</h4>
+    <table class="table">
+        <tr>
+            <th>
+                Гос. №
+            </th>
+            <th>
+                Марка авто
+            </th>
+            <th>
+                Сумма
+            </th>
+            <th>
+                Поездок
+            </th>
+            <th>
+                Рабочих дней
+            </th>
+            <th>
+                Сумма/Поездок
+            </th>
+            <th>
+                Сумма/Рабочих дней
+            </th>
+        </tr>
+
+        @foreach (var item in Model.repab)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Gn)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.sm)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.model)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.cnt)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.WorkDay)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.avgAll)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.avgDay)
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
+<div>
+    Итого
+</div>
+
+<div>
+    Сумма @Model.total.sm
+</div>
+<div>
+    Поездок  @Model.total.cnt
+</div>
+<div>
+    Отработано дней  @Model.total.WorkDay
+</div>

@@ -1,0 +1,34 @@
+﻿@model List<Muh.Models.MuhinView>
+
+@{
+    ViewBag.Title = "Выпуск";
+}
+
+<h2>Выпуск c @ViewBag.Beg по c @ViewBag.end</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            Продукция
+        </th>
+        <th>
+            Кол-во
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.txt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.kol)
+            </td>
+        </tr>
+    }
+
+</table>
+

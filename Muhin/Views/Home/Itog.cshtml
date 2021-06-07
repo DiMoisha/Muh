@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Muh.Models.Itog>
+
+@{
+    ViewBag.Title = "Итоги";
+}
+
+<h2>Итоги</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.categ)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.qtyDay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.qtyMonth)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.qty)
+        </th>
+
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.categ)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.qtyDay)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.qtyMonth)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.qty)
+        </td>
+
+    </tr>
+}
+
+</table>

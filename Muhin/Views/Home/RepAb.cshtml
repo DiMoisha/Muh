@@ -1,0 +1,61 @@
+﻿@model IEnumerable<Muh.Models.RepabView>
+
+@{
+    ViewBag.Title = "RepAb";
+}
+
+<h2>ИП Косаренко</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Gn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.model)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sm)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cnt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WorkDay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.avgAll)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.avgDay)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sm)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.model)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cnt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WorkDay)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.avgAll)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.avgDay)
+        </td>
+    </tr>
+}
+
+</table>
