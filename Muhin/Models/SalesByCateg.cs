@@ -4,16 +4,16 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Web;
 
 namespace Muh
 {
-    [Table("Muhin")]
-    public  class Muhin
+    [Table("bSalesByCateg")]
+    public class SalesByCateg
     {
         [Key]
-         public int ID { get; set; }
+        public int ID { get; set; }
+        public int saleId { get; set; }
         [Display(Name = "Продукция")]
         public string txt { get; set; }
         [Display(Name = "Продукция")]
@@ -24,7 +24,4 @@ namespace Muh
         public DateTime Dat { get; set; }
         public int CategID { get; set; }
     }
-
-
-   
 }

@@ -17,6 +17,11 @@ namespace Muh.Models
 
             return new DateTime(year, month, day);
         }
+
+        internal static string Date(DateTime bDat)
+        {
+            throw new NotImplementedException();
+        }
     }
 
     public static class DateToString

@@ -22,5 +22,19 @@ namespace Muh.Models
         [DisplayFormat(DataFormatString = "{0:dd.MM.yyyy}", ApplyFormatInEditMode = true)]
         public string CEDat { get; set; }
 
+
+        //[Display(Name = "Дата начала")]
+        //[DataType(DataType.Date)]
+        //[UIHint("Date")]
+        //[DisplayFormat(DataFormatString = "{0:dd.MM.yyyy}", ApplyFormatInEditMode = true)]
+        //public DateTime BDat { get; set; }
+
+
+        //[Display(Name = "Дата окончания")]
+        //[DataType(DataType.Date)]
+        //[UIHint("Date")]
+        //[DisplayFormat(DataFormatString = "{0:dd.MM.yyyy}", ApplyFormatInEditMode = true)]
+        //public DateTime EDat { get; set; }
+
     }
 }

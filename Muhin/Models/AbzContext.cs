@@ -10,6 +10,8 @@ namespace Muh.Models
         {
         }
          public DbSet<Muhin> Muhins { get; set; }
+
+        public DbSet<SalesByCateg> Sales { get; set; }
         public DbSet<Categ> Categs { get; set; }
         public DbSet<HourView> HourViews { get; set; }
         public DbSet<GraphSale> GraphSales { get; set; }

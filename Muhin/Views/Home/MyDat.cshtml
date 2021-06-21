@@ -7,19 +7,20 @@
 <h2>MyDat</h2>
 
 
+
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>MyDatView</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
-            @Html.LabelFor(model => model.BDat, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.CBDat, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.BDat, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.BDat, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.CBDat, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CBDat, "", new { @class = "text-danger" })
             </div>
         </div>
 

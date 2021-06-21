@@ -4,6 +4,11 @@
     ViewBag.Title = "График отгрузки";
 }
 
+<style>
+    .centr {
+        background-color: aqua;
+    }
+</style>
 
 <table class="table">
     <tr>
@@ -41,7 +46,7 @@
         else        
          <tr>
         }*@
-    <tr    BGCOLOR = "#FFFFCC" >
+    <tr class="@Html.Encode(item.Centr == 1 ? "centr" : "")">
     <td>
         @Html.DisplayFor(modelItem => item.Dat)
     </td>
