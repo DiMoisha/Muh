@@ -13,12 +13,12 @@
 <table class="table">
     <tr>
 
-        <th>
-            @Html.DisplayNameFor(model => model.Dat)
-        </th>
         @*<th>
-            @Html.DisplayNameFor(model => model.Centr)
+            @Html.DisplayNameFor(model => model.Dat)
         </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.Cust)
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.Adres)
         </th>
@@ -28,9 +28,9 @@
         <th>
             @Html.DisplayNameFor(model => model.Num)
         </th>
-        @*<th>
+        <th>
             @Html.DisplayNameFor(model => model.Plan)
-        </th>*@
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.Fact)
         </th>
@@ -47,12 +47,12 @@
          <tr>
         }*@
     <tr class="@Html.Encode(item.Centr == 1 ? "centr" : "")">
-    <td>
-        @Html.DisplayFor(modelItem => item.Dat)
-    </td>
     @*<td>
-            @Html.DisplayFor(modelItem => item.Centr)
-        </td>*@
+        @Html.DisplayFor(modelItem => item.Dat)
+    </td>*@
+    <td>
+            @Html.DisplayFor(modelItem => item.Cust)
+        </td>
     <td>
         @Html.DisplayFor(modelItem => item.Adres)
     </td>
@@ -62,9 +62,9 @@
     <td>
         @Html.DisplayFor(modelItem => item.Num)
     </td>
-    @*<td>
+    <td>
             @Html.DisplayFor(modelItem => item.Plan)
-        </td>*@
+        </td>
     <td>
         @Html.DisplayFor(modelItem => item.Fact)
     </td>

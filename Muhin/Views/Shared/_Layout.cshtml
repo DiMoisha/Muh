@@ -43,28 +43,105 @@
 
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Главная", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-                @Html.ActionLink("Итоги", "Itog", "Home", new { area = "" }, new { @class = "navbar-brand" })
-                @Html.ActionLink("Продукция", "Production", "Home", new { area = "" }, new { @class = "navbar-brand" })
-                @Html.ActionLink("Категории", "Categ", "Home", new { area = "" }, new { @class = "navbar-brand" })
-                @Html.ActionLink("По часам", "Hr", "Home", new { area = "" }, new { @class = "navbar-brand" })
-                @Html.ActionLink("График", "Graph", "Home", new { area = "" }, new { @class = "navbar-brand" })
-                @Html.ActionLink("Доставка", "IndexAB", "Home", new { area = "" }, new { @class = "navbar-brand" })
+    <header class="hidden-print">
+        <div class="navbar navbar-default navbar-static-top header-wrapper" role="navigation">
+            <div class="container visible-xs">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle btn-main-menu-xs" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand logo-brand-xs" href="/Home" title="Общество с ограниченной ответственностью 'Асфальтобетонный завод 'Капотня'">
+                        АБЗ&nbsp;&nbsp;<b>КАПОТНЯ</b>
+                    </a>
+                </div>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                </ul>
+            <div class="container hidden-xs">
+                <div class="row">
+                    <a class="navbar-brand logo-brand col-sm-6" href="/" title="ООО 'Асфальтобетонный завод 'Капотня'">
+                        <img src="/images/logo-0.svg" height="75" style="margin:0!important">
+                        <span class="text-center slogan">Производство и продажа материалов<br />для строительства дорог</span>
+                    </a>
+                    <adress class="text-center col-sm-6 vcard vcard-top" itemscope itemtype="http://schema.org/LocalBusiness">
+                        <span class="value-title fn org invisible nondisplay" title="ООО 'АБЗ КАПОТНЯ'" itemprop="name">ООО "АБЗ КАПОТНЯ"</span>
+                        <div class="adr" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                            <span class="glyphicon glyphicon-map-marker locality-marker"></span>&nbsp;
+                            <span class="locality" itemprop="addressLocality">Дзержинский</span>,&nbsp;
+                            <span class="street-address" itemprop="streetAddress">ул. Трудкоммуны</span>
+                        </div>
+                        <div class="tel">
+                            <span class="glyphicon glyphicon-earphone phone-marker"></span>&nbsp;
+                            <a title="WhatsApp" href="whatsapp://send?phone=+79154104926"><img src="/images/whatsapp.png" alt="Написать в Whatsapp" /></a>
+                            <abbr class="value" title="+ 7 (915) 410-49-26" itemprop="telephone">(915) 410-49-26</abbr><br />
+                            <span class="glyphicon glyphicon-earphone phone-marker"></span>&nbsp;
+                            <a title="WhatsApp" href="whatsapp://send?phone=+79168626597"><img src="/images/whatsapp.png" alt="Написать в Whatsapp" /></a>
+                            <abbr class="value" title="+7 (916) 862-65-97" itemprop="telephone">(916) 862-65-97</abbr>
+                        </div>
+                    </adress>
+                </div>
             </div>
+
+            <div class="container-fluid main-menu-wrapper">
+                <div class="container">
+                    <nav class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav main-menu">
+                            <li class="menuitem-1">
+                                @Html.ActionLink("Главная", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                            </li>
+                            <li class="menuitem-2">
+                                @Html.ActionLink("Итоги", "Itog", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                            </li>
+                            <li class="menuitem-3">
+                                @Html.ActionLink("Продукция", "Production", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                            </li>
+                            <li class="menuitem-4">
+                                @Html.ActionLink("Категории", "Categ", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                            </li>
+                            <li class="menuitem-5">
+                                @Html.ActionLink("По часам", "Hr", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                            </li>
+                            <li class="menuitem-6">
+                                @Html.ActionLink("График", "Graph", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                            </li>
+                            <li class="menuitem-7">
+                                @Html.ActionLink("Доставка", "IndexAB", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+
+
         </div>
-    </div>
+    </header>
+
+
+    @*<div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                        @Html.ActionLink("Главная", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                        @Html.ActionLink("Итоги", "Itog", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                        @Html.ActionLink("Продукция", "Production", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                        @Html.ActionLink("Категории", "Categ", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                        @Html.ActionLink("По часам", "Hr", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                        @Html.ActionLink("График", "Graph", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                        @Html.ActionLink("Доставка", "IndexAB", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                    </ul>
+                </div>
+            </div>
+        </div>*@
 
     <div class="container body-content">
         @RenderBody()
@@ -75,7 +152,7 @@
     </div>
 
     @*<script src="~/Scripts/jquery-3.3.1.min.js"></script>
-    <script src="~/Scripts/bootstrap.min.js"></script>*@
+        <script src="~/Scripts/bootstrap.min.js"></script>*@
 
     @Scripts.Render("~/bundles/bootstrap")
 </body>

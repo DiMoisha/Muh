@@ -13,12 +13,12 @@ namespace Muh.Models
         public int GraphSaleId { get; set; }
         [HiddenInput(DisplayValue = false)]
         public int CustId { get; set; }
-        [Display(Name = "Дата")]
-        [Required(ErrorMessage = "Дата обязательна")]
-        [DataType(DataType.Date)]
-        [UIHint("Date")]
-        [DisplayFormat(DataFormatString = "{0:dd.MM.yyyy}", ApplyFormatInEditMode = true)]
-        public DateTime Dat { get; set; }
+        //[Display(Name = "Дата")]
+        //[Required(ErrorMessage = "Дата обязательна")]
+        //[DataType(DataType.Date)]
+        //[UIHint("Date")]
+        //[DisplayFormat(DataFormatString = "{0:dd.MM.yyyy}", ApplyFormatInEditMode = true)]
+        //public DateTime Dat { get; set; }
         public int Centr { get; set; }
         [Display(Name = "Адрес")]
         public string Adres { get; set; }
@@ -32,5 +32,7 @@ namespace Muh.Models
         public decimal? Fact { get; set; }
         [Display(Name = "Загрузка")]
         public decimal? Ld { get; set; }
+        [Display(Name = "Заказчик")]
+        public string Cust { get; set; }
     }
 }
